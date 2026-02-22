@@ -14,17 +14,19 @@ int multiplication(int num1, int num2){
     int product = num1 * num2;
     return product;
 }
-double division(int num1, int num2){
+double division(double num1, double num2){
     double quotient = num1 / num2;
     return quotient;
 }
 
 int main(){
-    int num1;
-    int num2;
-    double result;
-    cout << "Input numbers and operator" << endl;
+    double num1;
+    double num2;
     char op;
+    double result;
+    cout << "Enter q for operator to quit" << endl;
+    while (op != 'q'){
+    cout << "Input numbers and operator" << endl;
     cin >> num1; cin >> op; cin >> num2;
     switch(op){
         case '+':
@@ -37,9 +39,13 @@ int main(){
             result = multiplication(num1, num2);
             break;
         case '/':
-            result = division(num1, num2);
+            result = division((double)num1, (double)num2);
             break;
     }
-    cout << num1 << " " << op << " " << num2 << " = " << result << endl;
+    if (op == 'q')
+        cout << "quitting program" << endl;
+    else
+        cout << num1 << " " << op << " " << num2 << " = " << result << endl;
+}
     return 0;
 }
