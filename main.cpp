@@ -24,7 +24,7 @@ int main(){
     double num2;
     char op;
     double result;
-    cout << "Enter q for operator to quit" << endl;
+    cout << "Use CTRL+Z to quit" << endl;
     while (op != 'q'){
     cout << "Input numbers and operator" << endl;
     cin >> num1; cin >> op; cin >> num2;
